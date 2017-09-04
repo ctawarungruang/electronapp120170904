@@ -11,3 +11,11 @@ app.on("ready",()=>{
         win = null;
     });
 });
+
+exports.openWindow = (__filename) => {
+    let win = new BrowserWindow({
+        width:600,
+        height:400
+    });
+    win.loadURL(`file://${__dirname}/index.html`);
+}
